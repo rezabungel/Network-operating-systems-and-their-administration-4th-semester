@@ -4,15 +4,16 @@
 ### The output of the result of the work of the programs from the lectures.
 ---
 __Program №1__
+Test 1  
 ```
-???  
-fatal error: conio.h: No such file or directory  
-3 | #include <conio.h>  
-| ^~~~~~~~~  
-compilation terminated.    
-???  
+Enter length of array: 10  
 ```
----
+Test 2
+```
+Enter length of array: -10  
+Error: can't allocate memory: Not enough space  
+```
+---  
 __Program №2__
 ```
 fd = 3  
