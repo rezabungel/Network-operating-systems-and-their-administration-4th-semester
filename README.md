@@ -1,8 +1,7 @@
 # Network-operating-systems-and-their-administration-4th-semester
 
 ---
-###The output of the result of the work of the programs from the lectures.
-
+### The output of the result of the work of the programs from the lectures.
 ---
 __Program №1__
 ```
@@ -41,6 +40,13 @@ what_s_up_man?
 ```
 ---
 __Program №6__
+
 ```
-???
+my_named_pipe is created  
+$ echo Hello_world! > my_named_pipe  
+my_named_pipe is opened  
+Incomming message (13): Hello_world!  
+  
+read error: Success  
 ```
+The command "$ echo Hello_world! > my_named_pipe" must be entered in a new console window.  
