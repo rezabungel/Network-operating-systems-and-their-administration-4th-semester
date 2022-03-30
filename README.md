@@ -3,7 +3,7 @@
 ---
 ### The output of the result of the work of the programs from the lectures.
 ---
-__Program №1__
+__Program №1__  
 Test 1  
 ```
 Enter length of array: 10  
