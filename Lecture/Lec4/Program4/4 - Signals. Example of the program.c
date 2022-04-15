@@ -1,6 +1,8 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include <wait.h>
 #include <signal.h>
+
 pid_t pid;
 int counter = 0;
 void handler1(int sig)

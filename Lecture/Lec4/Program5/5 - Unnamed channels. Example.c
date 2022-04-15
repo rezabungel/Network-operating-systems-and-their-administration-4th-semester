@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     if (pipe(pipefd) == -1)
-    {   /*не смог открыть канал*/
+    { /*не смог открыть канал*/
         //выводит описание ошибки последнего системного вызова в stderr
         perror("pipe");
         exit(EXIT_FAILURE);

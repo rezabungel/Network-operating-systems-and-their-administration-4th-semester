@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <conio.h>
 
-void main()
+int main()
 {
     int *array = NULL;
     unsigned length, i;
@@ -19,8 +18,8 @@ void main()
             for (i = 0; i < length; i++)
             {
                 array[i] = i * i;
-                printf(sizeof(array));
             }
+            printf("Allocated %lu bytes\n", length * sizeof(*array));
         }
         else
         {
@@ -33,7 +32,6 @@ void main()
     {
         free(array);
     }
-    getch();
 
     return 0;
 }

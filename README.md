@@ -6,9 +6,15 @@
 __Program №1__  
 Test 1  
 ```
-Enter length of array: 10  
+Enter length of array: 1  
+Allocated 4 bytes  
 ```
 Test 2
+```
+Enter length of array: 10  
+Allocated 40 bytes  
+```
+Test 3
 ```
 Enter length of array: -10  
 Error: can't allocate memory: Not enough space  

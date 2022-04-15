@@ -18,7 +18,7 @@ int main(int argc, char **argv)
         return 1;
     }
     printf("%s is created\n", NAMEDPIPE_NAME);
-    
+
     if ((fd = open(NAMEDPIPE_NAME, O_RDONLY)) <= 0)
     {
         perror("open error:");
