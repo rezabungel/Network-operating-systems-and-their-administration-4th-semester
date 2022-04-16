@@ -30,7 +30,7 @@ ___
 #### <a name="Building_a_project">Building a project.</a>
 The lecture folder stores program codes that can be compiled using a _makefile_ or manually using the _gcc compiler_. If you compile programs manually, then you need to go to the console to the folder with the necessary program code and call the compiler by writing `gcc name_file_programs.c -o name_result.out`, but it's better to use the makefile, where everything is provided. To use the makefile, you need to be in the root folder of the repository.
 
-Makefile structure.
+Makefile structure:
 + all
     + Lec2_3
         + Program1
@@ -54,7 +54,7 @@ All compiled programs are located in the folder where their code is stored. To r
 ___
 <a name="Program_№1">__Program №1__</a>  
 Example of a dynamic memory allocation program for an array.  
-What happens in this program?(???)  
+What happens in this program? -> В начале запрашиваем длину массива. Затем выделяем память для него с помощью функции malloc. При выделении памяти возвращается указатель, который будет равен NULL, если память не выделилась. В конце, если массив был инициализирован, то освобождаем выделенную память.  
 
 Test 1  
 ```
@@ -74,7 +74,7 @@ Error: can't allocate memory: Not enough space
 ___ 
 <a name="Program_№2">__Program №2__</a>  
 Example of a program for reading data from a file.  
-What happens in this program?(???)  
+What happens in this program? -> В начале выделяем память для массива чаров с помощью функции calloc. Затем создаем дескриптор и открываем файл для чтения, если файла не будет, то он будет создан. Выводим значение дескриптора файла. После читаем из файла 10 байт, и записываем в переменную sz количество байт, которое удалось прочитать. Далее обязательно записываем в конец массива, в который записывали прочитанную информацию, символ конца строки (терминальный ноль). В конце программы закрываем файл.  
 
 Test  
 ```
@@ -85,7 +85,7 @@ closed the fd.
 ___
 <a name="Program_№3">__Program №3__</a>  
 Creating a process. fork() system call.  
-What happens in this program?(???)  
+What happens in this program? -> В начале мы вызываем функцию fork. В результате вызова функции у процесса появляется один ребёнок. (Если бы мы вызвали функцию fork еще раз, то появилось бы два ребёнка... каждое последующее применение функции увеличивает количество детей в два раза). Далее при помощи оператора switch-case мы узнаем в каком процессе мы находимся.  
 
 Test  
 ```
