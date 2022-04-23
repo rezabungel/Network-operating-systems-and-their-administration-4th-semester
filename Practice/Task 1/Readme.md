@@ -3,7 +3,7 @@
 ## Script 01
 Mission: "Hello World!".
 
-The result of the script:
+The result of the script:  
 ![01.png](./01/01.png)
 
 ## Script 02
@@ -13,7 +13,7 @@ Mission: Вывести:
 
 Для второго случая использовать `echo` с необходимым параметром. Для просмотра доступных параметров можно воспользоваться командой `help echo`.
 
-The result of the script:
+The result of the script:  
 ![02.png](./02/02.png)
 
 ## Script 03
@@ -35,170 +35,170 @@ line text ...
 echo $res
 ```
 
-The result of the script:
+The result of the script:  
 ![03.png](./03/03.png)
 
 ## Script 04
 Mission: Вывести последовательность чисел от 1 до 10 с использованием цикла `while`.
 
-The result of the script:
+The result of the script:  
 ![04.png](./04/04.png)
 
 ## Script 05
 Mission: Вывести в одну строчку через пробел последовательность чисел от 10 до 1 с использованием цикла `for` и декремента. После завершения работы цикла добавить перенос строки.
 
-The result of the script:
+The result of the script:  
 ![05.png](./05/05.png)
 
 ## Script 06
 Mission: Получить имя пользователя с помощью команды `read` и вывести приветствие.
 
-The result of the script:
+The result of the script:  
 ![06.png](./06/06.png)
 
 ## Script 07
 Mission: Используя условный оператор `if` выполнить проверку на количество введенных пользовтелем символов. Если пользователь не ввел ни одного символа - вывести соответсвующее сообщение, иначе - вывести пользовательское сообщение.
 
-The result of the script:
+The result of the script:  
 ![07.png](./07/07.png)
 
 ## Script 08
 Mission: Реализовать "форму авторизации". Запросить с помощью `read` "логин" и "пароль". В случае ввода определенной комбинации (например `admin:123456`) вывести сообщение об успехе, иначе - сообщение об ошибке. Использовать оператор `&&`.
 
-The result of the script:
+The result of the script:  
 ![08.png](./08/08.png)
 
 ## Script 09
 Mission: Реализовать скрипт, определяющий принадлежность введенного пользователем слова к названию времен года (*winter, spring, summer, autumn*). Использовать условный оператор `||`. Если введено время года - вывести "Correct!", иначе - "Incorrect!".
 
-The result of the script:
+The result of the script:  
 ![09.png](./09/09.png)
 
 ## Script 10
 Mission: Доработать скрипт **09.sh**, добавив отдельный вывод для одного из корректных вариантов ввода. Использовать оператор `elif`.
 
-The result of the script:
+The result of the script:  
 ![10.png](./10/10.png)
 
 ## Script 11
 Mission: Доработать скрипт **10.sh**, использовав оператор `case`.
 
-The result of the script:
+The result of the script:  
 ![11.png](./11/11.png)
 
 ## Script 12
 Mission: Реализовать скрипт, принимающий и выводящий в одну строчку 2 аргумента. На второй строчке вывести количество переданных аргументов (используя конструкцию языка для подсчета).
 
-The result of the script:
+The result of the script:  
 ![12.png](./12/12.png)
 
 ## Script 13
 Mission: Реализовать скрипт, выводящий таблицу умножения на 2. Использовать цикл `for` или `while`.
 
-The result of the script:
+The result of the script:  
 ![13.png](./13/13.png)
 
 ## Script 14
 Mission: Реализовать скрипт, рассчитывающий сумму введенных чисел, реализовав функцию `function Sum()` и вызвав ее. Ввод слагаемых считывать с помощью `read`.
 
-The result of the script:
+The result of the script:  
 ![14.png](./14/14.png)
 
 ## Script 15
 Mission: Реализовать скрипт, ожидающий ввод числа и определяющий принадлежность этого числа к множеству четных/нечетных чисел.
 
-The result of the script:
+The result of the script:  
 ![15.png](./15/15.png)
 
 ## Script 16
 Mission: Реализовать скрипт, выводящий "шапку" таблицы процессов и последний процесс в приведенном ниже формате. Использовать по отдельности команды `head` и `tail` с необходимыми аргументами.
 
-The result of the script:
+The result of the script:  
 ![16.png](./16/16.png)
 
 ## Script 17
 Mission: Реализовать скрипт, возвращающий количество доступных процессоров. Использовать информацию из `/proc/cpuinfo`.
 
-The result of the script:
+The result of the script:  
 ![17.png](./17/17.png)
 
 ## Script 18
 Mission: Реализовать скрипт, проверяющий наличие файла. Путь до файла передавать первым аргументом при вызове.
 
-The result of the script:
+The result of the script:  
 ![18.png](./18/18.png)
 
 ## Script 19
 Mission: Реализовать скрипт, принимающий первым аргументом название файла; создающий его; выводящий листинг по названию файла; удаляющий файл; повторно выводящий листинг. Использовать команды `touch`, `ls`, `rm`.
 
-The result of the script:
+The result of the script:  
 ![19.png](./19/19.png)
 
 ## Script 20
 Mission: Реализовать скрипт, создающий папку. В случае, если папка уже существует, вывести сообщение об этом и закончить выполнение. Название папки получить через `read`.
 
-The result of the script:
+The result of the script:  
 ![20.png](./20/20.png)
 
 ## Script 21
 Mission: Реализовать скрипт, вычитывающий содержимое файла line-by-line. Путь до файла передать первым аргументом при вызове. Использовать конструкцию `while read line; do`.
 
-The result of the script:
+The result of the script:  
 ![21.png](./21/21.png)
 
 ## Script 22
 Mission: Реализовать скрипт, выводящий случайное число. Правую границу диапазона передать первым аргументом при вызове.
 
-The result of the script:
+The result of the script:  
 ![22.png](./22/22.png)
 
 ## Script 23
 Mission: Реализовать скрипт, выводящий дату запуска и дату завершения его работы. Между двумя выводами использовать `sleep`. Количество секунд передать в первом аргументе при запуске.
 
-The result of the script:
+The result of the script:  
 ![23.png](./23/23.png)
 
 ## Script 24
 Mission: Реализовать скрипт, выводящий "раскрашенный" первый аргумент.
 
-The result of the script:
+The result of the script:  
 ![24.png](./24/24.png)
 
 ## Script 25
 Mission: Реализовать скрипт, определяющий размер директории (`du`). Отобразить вывод в human-readable формате. Путь до целевой директории передать первым аргументом.
 
-The result of the script:
+The result of the script:  
 ![25.png](./25/25.png)
 
 ## Script 26
 Mission: Реализовать скрипт, инициирующий 2 процесса (например, `sleep 1 &`), и завершающийся после завершения последнего из процессов (`wait`).
 
-The result of the script:
+The result of the script:  
 ![26.png](./26/26.png)
 
 ## Script 27
 Mission: Реализовать скрипт, конвертирующий Unix time в human-readable дату. Исходное значение Unix time передавать первым аргументом.
 
-The result of the script:
+The result of the script:  
 ![27.png](./27/27.png)
 
 ## Script 28
 Mission: Реализовать скрипт создания временной директории. Использовать механизмы ОС.
 
-The result of the script:
+The result of the script:  
 ![28.png](./28/28.png)
 
 ## Script 29
 Mission: Реализовать скрипт, выводящий количество символов в самой длинной строке файла. Путь до исходного файла передавать первым аргументом.
 
-The result of the script:
+The result of the script:  
 ![29.png](./29/29.png)
 
 ## Script 30
 Mission: Реализовать скрипт, возвращающий дату последнего изменения файла. Путь до исходного файла передавать первым аргументом.
 
-The result of the script:
+The result of the script:  
 ![30.png](./30/30.png)
 
 ___
-P.s. [The problem condition is taken from here.](https://github.com/rtu-os/ktso-0x-20/tree/main/task01)
+P.s. [The problem condition is taken from here](https://github.com/rtu-os/ktso-0x-20/tree/main/task01).
