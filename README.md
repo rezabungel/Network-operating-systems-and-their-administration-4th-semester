@@ -23,7 +23,7 @@ Operating system for building the project:
 ## <a name="Practice">Practice.</a>
 Small scripts and completed tasks are stored in this folder. In order to run the script, you need to write `bash name_scipts`.  
 Task 1 - implement 30 bash scripts that perform what is shown in the screenshot. Go to [Task 1](./Practice/Task%201).  
-Task 2 - implement a chat using sockets. Go to [Task 2](./Practice/Task%202).  
+Task 3 - implement a chat using sockets... Go to [Task 3](./Practice/Task%203/).  
 
 ## <a name="Lecture">Lecture.</a>
 ### <a name="Building_a_project">Building a project.</a>
