@@ -80,54 +80,34 @@ int main()
     while (true)
     {
         printf("Client: ");
-        recv(server, buffer, BUFFER_SIZE, 0);           //Принимаем сообщение (bash команду) от клиента.
+        recv(server, buffer, BUFFER_SIZE, 0);           //Принимаем сообщение от клиента.
         printf("%s\n", buffer);                         //Выводим на экран полученное сообщение.
         if (is_client_connection_close(buffer) == true) //Проверяем полученное сообщение на наличие символа завершения.
         {
             break;
         }
 
-        printf("Server: Request accepted, processing...\n");
+        printf("Server: ");
+        fgets(buffer, BUFFER_SIZE, stdin); //Считываем информацию, которую отправим клиенту.
 
-        char execute[BUFFER_SIZE] = "./handler.sh "; //Переменная execute = ./handler.sh [команда bash от клиента].
-        strcat(execute, buffer);
-
-        //Функция system() передает строку, адресуемую параметром execute, в качестве команды для командного процессора операционной системы.
-        system(execute); //Здесь вызывается bash скрипт "handler.sh" с параметром bash команды, которую надо выполнить. (В скрипте переопределены поток вывода и поток ошибок; Результат выполнения bash команды будет записан в файл "result.txt").
-
-        sleep(3); //Ждём 3 секунды.
-
-        /* Работа с файлом "result.txt". Считываем результат работы (если все прошло успешно) bash команды, которая была получена от клиента. */
-        FILE *file; //Указатель на файл.
-
-        char line[BUFFER_SIZE] = "";                   //Переменная, используемая для чтения данных из файла.
-        if ((file = fopen("result.txt", "r")) != NULL) // Пытаемся открыть файл, который хранит результат работы bash команды, на чтение.
+        /* Удаляем символ конца строки */
+        size_t last = strlen(buffer) - 1;
+        if (buffer[last] == '\n')
         {
-            //Файл "result.txt" открыт.
-            while (fgets(buffer, BUFFER_SIZE, file)) //Считываем данные пока они есть.
-            {
-                strcat(line, buffer);
-            }
-
-            fclose(file); //Закрываем файл.
+            buffer[last] = '\0';
         }
-        else
+        /* Закончили удаление символа конца строки. */
+
+        send(server, buffer, BUFFER_SIZE, 0);           //Отправляем сообщение клиенту.
+        if (is_client_connection_close(buffer) == true) //Проверяем отправленное сообщение на наличие символа завершения.
         {
-            //Файл "result.txt" не был создан или его не удалось открыть.
-            printf("%s problems with the file result.txt.\n", ERROR_S);
-            return -1;
+            break;
         }
-
-        printf("Server: Sending the result to the client.\n\n");
-
-        send(server, line, BUFFER_SIZE, 0); //Отправляем сообщение клиенту.
     }
 
     /* Аргумент - закрываемый сокет-дескриптор. (Эта функция закрывает сокет и разрывает все соединения с этим сокетом. В отличие
     от функции "shutdown" функция "close" может дожидаться окончания всех операций с сокетом, обеспечивая "нормальное", а не аварийное закрытие соединений). */
     close(client);
-
-    system("rm -rf result.txt"); //Удаляем файл "result.txt".
 
     printf("\nGoodBye...\n");
     return 0;

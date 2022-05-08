@@ -29,5 +29,9 @@ As you can see from the structure, the makefile has 4 targets that can be called
 
 All compiled programs are located in the Task 3 folder. To run the program, you need to write `./server.out` and `./client.out` in the console. (You need to run two programs. The server starts first, the client starts second.)  
 
+### Some features.
+
+Принцип работы программы можно понять из анализа закомментированного кода "server.c" и "client.c". Важно чтобы после компиляции этих файлов первым запускался server, а вторым - client. Также ещё один важный факт - к серверу может подключиться только 1 клиент. Для завершения работы, клиент должен отправить "символ завершения", который определен `#define SERVER_CLOSE_CONNECTION_SYMBOL` и `#define CLIENT_CLOSE_CONNECTION_SYMBOL`. Основная реализация кода взята из [Task 2](./Practice/Task%202/). Самое главное внесенное изменение, состоит в том, что теперь клиент посылает серверу bash команды, которые обрабатываются в скрипте "handler.sh". В этом скрипте переопределены потоки ввода вывода; результаты выполнения bash команд, которые были получены от клиента, будут запиваться в файл "result.txt". Сервер читает данные из этого файла и отправляет их клиенту как результат выполнения bash команды. После чего сервер ждёт новую команду.  
+
 ___
 P.s. [The problem condition is taken from here](https://github.com/rtu-os/ktso-0x-20/tree/main/task03). (There are also links to useful materials here).

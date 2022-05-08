@@ -69,7 +69,7 @@ int main()
     while (true)
     {
         printf("Client: ");
-        fgets(buffer, BUFFER_SIZE, stdin); //Считываем информацию (bash команду), которую отправим серверу.
+        fgets(buffer, BUFFER_SIZE, stdin); //Считываем информацию, которую отправим серверу.
 
         /* Удаляем символ конца строки */
         size_t last = strlen(buffer) - 1;
@@ -85,10 +85,13 @@ int main()
             break;
         }
 
-        printf("Server:\n**********\n\n");
-        recv(client, buffer, BUFFER_SIZE, 0); //Принимаем сообщение от сервера.
-        printf("%s\n", buffer);               //Выводим на экран полученное сообщение.
-        printf("**********\n");
+        printf("Server: ");
+        recv(client, buffer, BUFFER_SIZE, 0);           //Принимаем сообщение от сервера.
+        printf("%s\n", buffer);                         //Выводим на экран полученное сообщение.
+        if (is_client_connection_close(buffer) == true) //Проверяем полученное сообщение на наличие символа завершения.
+        {
+            break;
+        }
     }
 
     /* Аргумент - закрываемый сокет-дескриптор. (Эта функция закрывает сокет и разрывает все соединения с этим сокетом. В отличие
